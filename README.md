@@ -4,6 +4,7 @@ Hi there! I've been doing game jams for some time, and I thought that some ready
 
 ## What's included:
 
+- simple top down movement (with easing)
 - quality `.gitignore` combined from standard [Unity gitignore](https://github.com/github/gitignore/blob/main/Unity.gitignore) and [Toptal](https://www.toptal.com/developers/gitignore/)
 - `.gitattribute` (Line Endings, CRLF, LF, git-lfs)
 - `.editorconfig`
