@@ -9,8 +9,9 @@ public class PlayerTopDownMovement : MonoBehaviour
   [SerializeField]
   bool _useEasing = false;
 
+  // less is slower, around 2f like sliding on ice
   [SerializeField]
-  float _easingSpeed = 2f;
+  float _easingSpeed = 10f;
 
   Rigidbody2D _rigidBody2D;
   PlayerInput _playerInput;
@@ -30,13 +31,9 @@ public class PlayerTopDownMovement : MonoBehaviour
   void Update()
   {
     if (_useEasing)
-    {
       EasingMovement();
-    }
     else
-    {
       BaseMovement();
-    }
   }
 
   /**
@@ -46,11 +43,16 @@ public class PlayerTopDownMovement : MonoBehaviour
   {
     Vector2 currentVelocity = _rigidBody2D.linearVelocity;
     Vector2 move = _playerInput.actions["Move"].ReadValue<Vector2>();
+    Vector2 fullVelocity = move * _speed;
 
-    float velocityX = Mathf.Lerp(currentVelocity.x, move.x * _speed, Time.deltaTime * _easingSpeed);
-    float velocityY = Mathf.Lerp(currentVelocity.y, move.y * _speed, Time.deltaTime * _easingSpeed);
+    // Interpolate between currentVelocity and fullVelocity
+    Vector2 desiredVelocity = Vector2.Lerp(
+      currentVelocity,
+      fullVelocity,
+      Time.deltaTime * _easingSpeed // 0f to 1f
+    );
 
-    _rigidBody2D.linearVelocity = new Vector2(velocityX, velocityY);
+    _rigidBody2D.linearVelocity = desiredVelocity;
   }
 
   /**

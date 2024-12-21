@@ -223,7 +223,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9188195601121011113, guid: f8aab347effcb324295a8e54fbd7d5cd, type: 3}
       propertyPath: m_Size.y
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 9188195601121011113, guid: f8aab347effcb324295a8e54fbd7d5cd, type: 3}
       propertyPath: m_DrawMode
@@ -436,9 +436,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c10c94b33f550c43a28c418aafdbf24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _speed: 5
   _useEasing: 0
   _easingSpeed: 10
-  _speed: 5
 --- !u!4 &466715646 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4471690237967472382, guid: f8aab347effcb324295a8e54fbd7d5cd, type: 3}
@@ -1072,7 +1072,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9188195601121011113, guid: f8aab347effcb324295a8e54fbd7d5cd, type: 3}
       propertyPath: m_Size.y
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 9188195601121011113, guid: f8aab347effcb324295a8e54fbd7d5cd, type: 3}
       propertyPath: m_DrawMode
